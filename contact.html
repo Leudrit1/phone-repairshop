@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - RepairTech Handy Reparatur</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="attached_assets/WhatsApp Image 2025-09-04 at 13.25.28_1757005702011.jpeg" alt="Logo" class="logo">
+                <span class="logo-text">RepairTech</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Startseite</a></li>
+                <li><a href="services.html" class="nav-link">Leistungen</a></li>
+                <li><a href="gallery.html" class="nav-link">Galerie</a></li>
+                <li><a href="about.html" class="nav-link">Über uns</a></li>
+                <li><a href="contact.html" class="nav-link active">Kontakt</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Kontakt</h1>
+                <p>Nehmen Sie Kontakt mit uns auf - wir helfen gerne weiter</p>
+            </div>
+        </section>
+
+        <section class="contact-main">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-form-section">
+                        <h2>Nachricht senden</h2>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">Vorname *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Nachname *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-Mail Adresse *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefonnummer</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="device">Gerät</label>
+                                <select id="device" name="device">
+                                    <option value="">Gerät auswählen</option>
+                                    <option value="iphone">iPhone</option>
+                                    <option value="samsung">Samsung Galaxy</option>
+                                    <option value="huawei">Huawei</option>
+                                    <option value="xiaomi">Xiaomi</option>
+                                    <option value="oneplus">OnePlus</option>
+                                    <option value="google">Google Pixel</option>
+                                    <option value="other">Anderes</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="problem">Problem-Beschreibung</label>
+                                <select id="problem" name="problem">
+                                    <option value="">Problem auswählen</option>
+                                    <option value="display">Display-Schaden</option>
+                                    <option value="battery">Akku-Probleme</option>
+                                    <option value="water">Wasserschaden</option>
+                                    <option value="charging">Ladebuchse defekt</option>
+                                    <option value="speaker">Audio-Probleme</option>
+                                    <option value="camera">Kamera defekt</option>
+                                    <option value="microsoldering">Mikrolöten erforderlich</option>
+                                    <option value="other">Sonstiges</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Nachricht *</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Beschreiben Sie Ihr Problem detailliert..." required></textarea>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="privacy" name="privacy" required>
+                                <label for="privacy">Ich stimme der Verarbeitung meiner Daten gemäss Datenschutzerklärung zu *</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Nachricht senden
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="contact-info-section">
+                        <h2>Kontakt-Informationen</h2>
+                        <div class="contact-cards">
+                            <div class="contact-card">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>Adresse</h3>
+                                    <p>Musterstrasse 123<br>8000 Zürich<br>Schweiz</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-card">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>Telefon</h3>
+                                    <p><a href="tel:+41123456789">+41 12 345 67 89</a></p>
+                                    <small>Mo-Fr: 09:00 - 18:00</small>
+                                </div>
+                            </div>
+
+                            <div class="contact-card">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>E-Mail</h3>
+                                    <p><a href="mailto:info@repairtech.ch">info@repairtech.ch</a></p>
+                                    <small>Antwort innerhalb 24h</small>
+                                </div>
+                            </div>
+
+                            <div class="contact-card">
+                                <div class="contact-icon">
+                                    <i class="fas fa-whatsapp"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>WhatsApp</h3>
+                                    <p><a href="https://wa.me/41123456789">+41 12 345 67 89</a></p>
+                                    <small>Schnelle Kommunikation</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hours-card">
+                            <h3><i class="fas fa-clock"></i> Öffnungszeiten</h3>
+                            <div class="hours-list">
+                                <div class="hours-item">
+                                    <span class="day">Montag - Freitag</span>
+                                    <span class="time">09:00 - 18:00</span>
+                                </div>
+                                <div class="hours-item">
+                                    <span class="day">Samstag</span>
+                                    <span class="time">10:00 - 16:00</span>
+                                </div>
+                                <div class="hours-item">
+                                    <span class="day">Sonntag</span>
+                                    <span class="time">Geschlossen</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <div class="container">
+                <h2>So finden Sie uns</h2>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2701.8158329156253!2d8.5376331160229!3d47.37674197917142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900a0a4f47b3ad%3A0x6a7a4d8c9d7e3a4e!2sZ%C3%BCrich%2C%20Switzerland!5e0!3m2!1sen!2sch!4v1620000000000!5m2!1sen!2sch" 
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <div class="map-info">
+                    <div class="map-directions">
+                        <h3>Anfahrt</h3>
+                        <div class="direction-item">
+                            <i class="fas fa-train"></i>
+                            <span><strong>ÖV:</strong> Tram 6, 7, 13 bis Haltestelle "Rennweg"</span>
+                        </div>
+                        <div class="direction-item">
+                            <i class="fas fa-car"></i>
+                            <span><strong>Auto:</strong> Parkhäuser in der Nähe verfügbar</span>
+                        </div>
+                        <div class="direction-item">
+                            <i class="fas fa-walking"></i>
+                            <span><strong>Zu Fuss:</strong> 5 Min vom Hauptbahnhof Zürich</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="emergency-section">
+            <div class="container">
+                <div class="emergency-content">
+                    <div class="emergency-icon">
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
+                    <div class="emergency-text">
+                        <h2>Notfall-Reparatur?</h2>
+                        <p>Für dringende Reparaturen bieten wir einen Express-Service an. 
+                        Rufen Sie uns an oder schreiben Sie uns auf WhatsApp!</p>
+                    </div>
+                    <div class="emergency-actions">
+                        <a href="tel:+41123456789" class="btn btn-emergency">
+                            <i class="fas fa-phone"></i>
+                            Sofort anrufen
+                        </a>
+                        <a href="https://wa.me/41123456789" class="btn btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>RepairTech</h3>
+                    <p>Ihr Spezialist für professionelle Handy-Reparaturen in der Schweiz</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#microsoldering">Mikrolöten</a></li>
+                        <li><a href="services.html#display">Display-Reparatur</a></li>
+                        <li><a href="services.html#battery">Akku-Wechsel</a></li>
+                        <li><a href="services.html#water">Wasserschaden</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Musterstrasse 123, 8000 Zürich</li>
+                        <li><i class="fas fa-phone"></i> +41 12 345 67 89</li>
+                        <li><i class="fas fa-envelope"></i> info@repairtech.ch</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Öffnungszeiten</h4>
+                    <ul>
+                        <li>Mo-Fr: 09:00 - 18:00</li>
+                        <li>Sa: 10:00 - 16:00</li>
+                        <li>So: Geschlossen</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 RepairTech. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

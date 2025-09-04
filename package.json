@@ -1,0 +1,25 @@
+{
+  "name": "repairtech-website",
+  "version": "1.0.0",
+  "description": "Swiss Phone Repair Shop Website - Professional repair services with emphasis on microsoldering",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "phone repair",
+    "microsoldering",
+    "switzerland",
+    "repair shop",
+    "website"
+  ],
+  "author": "RepairTech",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

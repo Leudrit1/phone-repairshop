@@ -637,6 +637,6 @@ if (!window.IntersectionObserver) {
 }
 
 // Console info for developers
-console.log('RepairTech Website - Swiss Phone Repair Shop');
+console.log('B-repair&service Website - Swiss Phone Repair Shop');
 console.log('Interactive features loaded successfully!');
-console.log('For support: info@repairtech.ch');
+console.log('For support: info@b-repairservice.ch');

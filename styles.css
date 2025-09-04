@@ -386,6 +386,16 @@ a:hover {
     clip-path: polygon(0 100%, 100% 0, 100% 100%);
 }
 
+.page-hero::before {
+    content: '';
+    position: absolute;
+    bottom: 52px;
+    left: 20%;
+    right: 20%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, var(--accent-orange) 50%, transparent 100%);
+}
+
 .page-hero h1 {
     color: var(--white);
     font-size: 3rem;
@@ -455,7 +465,7 @@ section {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary-blue) 0%, var(--primary-blue-light) 100%);
+    background: linear-gradient(90deg, var(--primary-blue) 0%, var(--accent-orange) 50%, var(--primary-blue-light) 100%);
     transform: scaleX(0);
     transition: transform var(--transition-normal);
 }
@@ -807,6 +817,22 @@ section {
     opacity: 1;
 }
 
+.gallery-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-blue) 0%, var(--accent-orange) 100%);
+    transform: scaleX(0);
+    transition: transform var(--transition-normal);
+}
+
+.gallery-item:hover::after {
+    transform: scaleX(1);
+}
+
 .gallery-info h3 {
     color: var(--white);
     font-size: 1.125rem;
@@ -863,6 +889,7 @@ section {
     background: var(--primary-blue);
     color: var(--white);
     border-color: var(--primary-blue);
+    box-shadow: 0 2px 0 var(--accent-orange);
 }
 
 .gallery-masonry {
@@ -1316,6 +1343,19 @@ section {
     padding: var(--spacing-md);
     background: var(--grey-50);
     border-radius: var(--radius-md);
+    position: relative;
+}
+
+.contact-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 60%;
+    background: var(--accent-orange);
+    border-radius: 0 2px 2px 0;
 }
 
 .contact-icon {

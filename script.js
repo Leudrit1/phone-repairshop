@@ -639,4 +639,4 @@ if (!window.IntersectionObserver) {
 // Console info for developers
 console.log('B-repair&service Website - Swiss Phone Repair Shop');
 console.log('Interactive features loaded successfully!');
-console.log('For support: info@b-repairservice.ch');
+console.log('For support: info@b-repair.ch');

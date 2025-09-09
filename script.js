@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeScrollAnimations();
     initializeSmoothScrolling();
     initializeScrollEffects();
+    initializePriceListFilters();
 });
 
 /* =================================
@@ -632,6 +633,43 @@ if (!window.IntersectionObserver) {
         const animatedElements = document.querySelectorAll('.service-card, .gallery-item, .team-member, .mission-item');
         animatedElements.forEach(el => {
             el.classList.add('fade-in');
+        });
+    });
+}
+
+/* =================================
+   PRICE LIST FILTERS
+   ================================= */
+function initializePriceListFilters() {
+    const filterButtons = document.querySelectorAll('.price-filter-buttons .btn');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => {
+                btn.classList.remove('btn-primary');
+                btn.classList.add('btn-secondary');
+            });
+            
+            // Add active class to clicked button
+            this.classList.remove('btn-secondary');
+            this.classList.add('btn-primary');
+            
+            // Get target section
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                // Smooth scroll to target section
+                const offsetTop = targetSection.offsetTop - 100; // Account for sticky header
+                
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 }

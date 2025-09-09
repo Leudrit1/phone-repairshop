@@ -1050,6 +1050,95 @@ section {
 }
 
 /* =================================
+   PRICE LIST (PREISLISTE)
+   ================================= */
+.price-hero {
+    padding: 150px 0 60px;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-light) 100%);
+    color: var(--white);
+    text-align: center;
+}
+
+.price-filters {
+    background: var(--white);
+    border-bottom: 1px solid var(--grey-200);
+}
+
+.price-filter-buttons {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+    padding: var(--spacing-md) 0;
+    justify-content: center;
+}
+
+.price-filter-buttons .btn {
+    padding: 0.75rem 1.25rem;
+}
+
+.price-section {
+    background: var(--grey-50);
+}
+
+.price-section h2 {
+    color: var(--primary-blue);
+}
+
+.price-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.price-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+.price-card-header {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-light) 100%);
+    color: var(--white);
+    padding: var(--spacing-md);
+}
+
+.price-card-header h3 {
+    color: var(--white);
+    margin: 0;
+    font-size: 1.125rem;
+}
+
+.price-card-body {
+    padding: var(--spacing-md);
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.price-table th,
+.price-table td {
+    text-align: left;
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--grey-200);
+    color: var(--secondary-grey);
+}
+
+.price-table th {
+    color: var(--grey-900);
+    font-weight: var(--font-weight-semibold);
+    background: var(--grey-100);
+}
+
+.price-note {
+    margin-top: var(--spacing-sm);
+    font-size: 0.875rem;
+    color: var(--secondary-grey);
+}
+
+/* =================================
    ABOUT PAGE
    ================================= */
 .about-story {

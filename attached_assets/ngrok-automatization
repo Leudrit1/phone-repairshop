@@ -1,0 +1,9 @@
+#!/bin/bash
+
+while true
+do
+  echo "Ì∫Ä Duke nisur ngrok..."
+  ngrok http 3000   # ndrysho portin sipas projektit t√´nd
+  echo "‚ùå Ngrok u mbyll. Duke rifilluar pas 5 sekondave..."
+  sleep 5
+done

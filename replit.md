@@ -1,8 +1,8 @@
-# RepairTech Website
+# B-repair&service Website
 
 ## Overview
 
-RepairTech is a professional phone repair shop website built for a Swiss repair business specializing in microsoldering and complex smartphone repairs. The project features a modern, responsive design with Swiss branding colors (professional blues and greys) and focuses heavily on microsoldering services. The website includes 5 main pages with interactive features, smooth animations, and mobile-optimized design.
+B-repair&service is a professional phone repair shop website built for a Swiss repair business specializing in microsoldering and complex smartphone repairs. The project features a modern, responsive design with Swiss branding colors (professional blues and greys) and focuses heavily on microsoldering services. The website includes 5 main pages with interactive features, smooth animations, and mobile-optimized design.
 
 ## Recent Changes (September 2025)
 

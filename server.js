@@ -31,13 +31,15 @@ app.get('*', (req, res) => {
         fileName = 'about.html';
     } else if (req.path.includes('contact')) {
         fileName = 'contact.html';
+    } else if (req.path.includes('preisliste')) {
+        fileName = 'preisliste.html';
     }
     
     res.sendFile(path.join(__dirname, fileName));
 });
 
 app.listen(PORT, '0.0.0.0', () => {
-    console.log(`🚀 RepairTech website running on http://0.0.0.0:${PORT}`);
+    console.log(`🚀 B-repair&service website running on http://0.0.0.0:${PORT}`);
     console.log(`📱 Swiss Phone Repair Shop website is ready!`);
     console.log(`🔧 Serving static files with no-cache headers for development`);
 });

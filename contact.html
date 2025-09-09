@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt - RepairTech Handy Reparatur</title>
+    <title>Kontakt - B-repair&service</title>
+    <link rel="icon" type="image/png" href="attached_assets/WhatsApp Image 2025-09-04 at 13.25.28_1757005702011.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,7 +46,15 @@
                 <div class="contact-grid">
                     <div class="contact-form-section">
                         <h2>Nachricht senden</h2>
-                        <form class="contact-form" id="contactForm">
+                        
+                        <!-- Formspree Integration -->
+                        <form class="contact-form" id="contactForm"
+                              action="https://formspree.io/f/mpwjbpea"
+                              method="POST">
+                              
+                            <!-- Anti-spam -->
+                            <input type="hidden" name="_subject" value="Neue Kontaktanfrage über B-repair&service Website">
+                            
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="firstName">Vorname *</label>
@@ -104,8 +113,14 @@
                                 Nachricht senden
                             </button>
                         </form>
+
+                        <!-- Success Message -->
+                        <div id="formSuccess" style="display:none; margin-top:15px; color:green;">
+                            ✅ Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.
+                        </div>
                     </div>
 
+                    <!-- Kontakt-Informationen (pa ndryshim) -->
                     <div class="contact-info-section">
                         <h2>Kontakt-Informationen</h2>
                         <div class="contact-cards">
@@ -152,26 +167,23 @@
                             </div>
                         </div>
 
-
                         <div class="contact-icon">
                             <i class="fas fa-shipping-fast"></i>
                         </div>
                         </br>
-                        
                         <div class="contact-details">
                             <h3>Reparatur-Service</h3>
                             <p>Unser Service funktioniert ausschliesslich per Post. Bitte senden Sie Ihr Gerät an folgende Adresse:</p>
                             <p><strong>B-repair&service</strong></p>
-                                    <p>Bürglenweg 24<br>3627 Heimberg<br>Schweiz</p>
-
+                            <p>Bürglenweg 24<br>3627 Heimberg<br>Schweiz</p>
                             <p>Kontaktieren Sie uns für weitere Informationen zum Versand und zur Reparaturabwicklung.</p>
                         </div>
-                    </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Harta -->
         <section class="map-section">
             <div class="container">
                 <h2>So finden Sie uns</h2>
@@ -205,6 +217,7 @@
             </div>
         </section>
 
+        <!-- Emergency -->
         <section class="emergency-section">
             <div class="container">
                 <div class="emergency-content">
@@ -231,13 +244,13 @@
         </section>
     </main>
 
+    <!-- Footer (pa ndryshim) -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
                         <img src="attached_assets/WhatsApp Image 2025-09-04 at 13.25.28_1757005702011.png" alt="B-repair&service Logo" class="footer-logo-img">
-                        
                     </div>                    
                     <h3>B-repair&service</h3>
                     <p>Ihr Spezialist für professionelle Handy-Reparaturen in der Schweiz</p>
@@ -265,7 +278,6 @@
                         <li><i class="fas fa-envelope"></i> info@b-repair.ch</li>
                     </ul>
                 </div>
-                
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 B-repair&service. Alle Rechte vorbehalten.</p>
@@ -273,6 +285,26 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Success message handling
+        const form = document.getElementById("contactForm");
+        const successMessage = document.getElementById("formSuccess");
+
+        form.addEventListener("submit", async function(e) {
+            e.preventDefault();
+            const data = new FormData(form);
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            });
+            if (response.ok) {
+                form.reset();
+                successMessage.style.display = "block";
+            } else {
+                alert("❌ Fehler beim Senden der Nachricht. Bitte erneut versuchen.");
+            }
+        });
+    </script>
 </body>
 </html>

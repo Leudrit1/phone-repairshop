@@ -1,5 +1,5 @@
 {
-  "name": "repairtech-website",
+  "name": "b-repair-service-website",
   "version": "1.0.0",
   "description": "Swiss Phone Repair Shop Website - Professional repair services with emphasis on microsoldering",
   "main": "server.js",
@@ -14,7 +14,7 @@
     "repair shop",
     "website"
   ],
-  "author": "RepairTech",
+  "author": "B-repair&service",
   "license": "MIT",
   "dependencies": {
     "express": "^4.21.2"

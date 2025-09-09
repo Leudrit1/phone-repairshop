@@ -224,17 +224,43 @@ a:hover {
 }
 
 .logo {
-    height: 60px;
-    width: 60px;
-    object-fit: cover;
+    height: 70px;
+    width: auto;
+    object-fit: contain;
     border-radius: var(--radius-sm);
 }
 
-.logo-text {
-    font-size: 1.5rem;
-    font-weight: var(--font-weight-bold);
-    color: var(--primary-blue);
+
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    margin-left: 30px;
 }
+
+.footer-logo-img {
+    height: 110px;
+    width: auto;
+    object-fit: contain;
+    border-radius: var(--radius-sm);
+    max-width: 180px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .nav-menu {
     display: flex;
@@ -276,12 +302,12 @@ a:hover {
    HERO SECTIONS
    ================================= */
 .hero {
+    position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, var(--grey-50) 0%, var(--grey-100) 100%);
+    justify-content: center;
     padding-top: 80px;
-    position: relative;
     overflow: hidden;
 }
 
@@ -289,15 +315,18 @@ a:hover {
     content: '';
     position: absolute;
     top: 0;
-    right: 0;
-    width: 50%;
+    left: 0;
+    width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, var(--primary-blue-light) 0%, var(--primary-blue) 100%);
+    background: url('attached_assets/generated_images/Microsoldering_repair_workspace_90e34e5f.png') no-repeat center center;
+    background-size: cover;
     opacity: 0.1;
-    border-radius: 0 0 0 50%;
+    z-index: 1;
 }
 
 .hero-container {
+    position: relative;
+    z-index: 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-xxl);
@@ -310,6 +339,59 @@ a:hover {
 
 .hero-content {
     z-index: 2;
+}
+
+.hero-circle {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    width: 20vw; /* Madhësia e fotos përshtatet me gjerësinë e viewport-it */
+    height: 20vw; /* Lartësia e fotos përshtatet me gjerësinë e viewport-it */
+    max-width: 480px; /* Kufizo madhësinë maksimale */
+    max-height: 480px; /* Kufizo madhësinë maksimale */
+    min-width: 100px; /* Kufizo madhësinë minimale për telefonat */
+    min-height: 100px; /* Kufizo madhësinë minimale për telefonat */
+    background-image: url('attached_assets/generated_images/Microsoldering_repair_workspace_90e34e5f.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35); /* Hije e butë poshtë */
+    animation: float 6s ease-in-out infinite;
+    z-index: 2;
+}
+
+/* Media query për ekranet e vogla (telefonat) */
+@media (max-width: 768px) {
+    .hero-circle {
+        right: 10px; /* Poziciono më afër për ekranet e vogla */
+        width: 15vw; /* Zvogëlo madhësinë për telefonat */
+        height: 15vw;
+        max-width: 120px; /* Kufizo madhësinë maksimale për telefonat */
+        max-height: 120px;
+    }
+}
+
+/* Media query për ekranet shumë të vogla (telefonat e vegjël) */
+@media (max-width: 480px) {
+    .hero-circle {
+        right: 5px; /* Poziciono më afër për ekranet shumë të vogla */
+        width: 10vw; /* Madhësi shumë e vogël për telefonat e vegjël */
+        height: 10vw;
+        max-width: 80px; /* Kufizo madhësinë maksimale për telefonat e vegjël */
+        max-height: 80px;
+    }
+}
+
+/* Animacioni për lëvizjen */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
 }
 
 .hero-title {
@@ -345,7 +427,6 @@ a:hover {
     justify-content: center;
     align-items: center;
 }
-
 .hero-background-image {
     width: 100%;
     height: 100%;
@@ -745,10 +826,10 @@ section {
     justify-content: center;
     background: linear-gradient(135deg, var(--grey-100) 0%, var(--grey-200) 100%);
     border-radius: var(--radius-md);
-    min-height: 200px;
     color: var(--secondary-grey);
     text-align: center;
     padding: var(--spacing-md);
+    height: fit-content;
 }
 
 .gallery-placeholder i,
@@ -773,9 +854,7 @@ section {
 /* =================================
    GALLERY
    ================================= */
-.gallery-preview {
-    background: var(--grey-50);
-}
+
 
 .gallery-grid {
     display: grid;
@@ -783,83 +862,38 @@ section {
     gap: var(--spacing-md);
 }
 
-.gallery-item {
-    position: relative;
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    background: var(--white);
-    box-shadow: var(--shadow-md);
-    transition: all var(--transition-normal);
-    cursor: pointer;
-}
 
-.gallery-item:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
-}
 
-.gallery-image {
-    position: relative;
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
-}
 
-.gallery-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+.video-container {
     display: flex;
-    align-items: flex-end;
-    padding: var(--spacing-md);
-    opacity: 0;
-    transition: opacity var(--transition-normal);
+    justify-content: center; /* Qendron videot ne qender */
+    gap: 20px; /* Hapesire mes videove */
+    flex-wrap: wrap; /* Ne rast se faqja zvogelohet, videot do zbresin poshte */
+  }
+
+  video {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+
+
+
+
+
+
+
+
+
+.gallery-image img {
+    width: 100%; /* Përshtat madhësinë e imazhit me kontejnerin */
+    height: 100%; /* Përshtat lartësinë e imazhit me kontejnerin */
+    object-fit: cover; /* Siguro që imazhi të mbushet brenda kufijve */
+    border-radius: 10px; /* Opsionale: qoshe të rrumbullakëta */
 }
 
-.gallery-item:hover .gallery-overlay {
-    opacity: 1;
-}
 
-.gallery-item::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--primary-blue) 0%, var(--accent-orange) 100%);
-    transform: scaleX(0);
-    transition: transform var(--transition-normal);
-}
-
-.gallery-item:hover::after {
-    transform: scaleX(1);
-}
-
-.gallery-info h3 {
-    color: var(--white);
-    font-size: 1.125rem;
-    margin-bottom: var(--spacing-xs);
-}
-
-.gallery-info p {
-    color: var(--grey-300);
-    font-size: 0.875rem;
-    margin-bottom: var(--spacing-xs);
-}
-
-.gallery-category {
-    display: inline-block;
-    background: var(--primary-blue);
-    color: var(--white);
-    padding: 0.25rem 0.5rem;
-    border-radius: var(--radius-sm);
-    font-size: 0.75rem;
-    font-weight: var(--font-weight-medium);
-}
 
 .gallery-link {
     text-align: center;
@@ -1924,3 +1958,8 @@ section {
         break-inside: avoid;
     }
 }
+
+
+
+
+
